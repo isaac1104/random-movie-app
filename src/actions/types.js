@@ -1,1 +1,2 @@
 export const FETCH_MOVIE_DATA = "FETCH_MOVIE_DATA";
+export const FETCH_DATA_ERROR = "FETCH_DATA_ERROR";
