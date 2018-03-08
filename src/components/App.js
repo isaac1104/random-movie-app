@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import SearchForm from "./SearchForm";
 
 const App = () => {
   return (
     <div>
-      <h1>hello</h1>
+      <div className="jumbotron">
+        <SearchForm/>
+      </div>
     </div>
   );
 }
