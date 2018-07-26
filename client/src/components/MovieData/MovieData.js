@@ -4,8 +4,14 @@ import { connect } from 'react-redux';
 class MovieData extends Component {
   renderMovieData() {
     const { isFetching, error, movieData } = this.props.data;
+    const style = {
+      movieDetail: {
+        color: '#fff'
+      }
+    };
+
     if (isFetching) {
-      return <h1>Loading...</h1>
+      return <h1 style={style.movieData}>Loading...</h1>
     }
     if (error) {
       return <h1 className='text-danger'>{movieData}</h1>
@@ -18,7 +24,7 @@ class MovieData extends Component {
         <div className='col-sm-6'>
           <img src={movieData.Poster} alt='movie poster' className='img' />
         </div>
-        <div className='col-sm-6 text-primary'>
+        <div className='col-sm-6' style={style.movieDetail}>
           <h1>{movieData.Title}</h1>
           <h3>{movieData.Genre}</h3>
           <h5>{movieData.Released} | {movieData.Runtime} | {movieData.Rated}</h5>
