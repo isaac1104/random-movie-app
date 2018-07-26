@@ -1,16 +1,32 @@
-import { FETCH_MOVIE_DATA, FETCH_DATA_ERROR } from "./types";
+import { REQUEST_MOVIE_DATA, RECEIVE_MOVIE_DATA, MOVIE_DATA_ERROR } from "./types";
 import axios from "axios";
-import keys from "../config/keys";
 
-export const fetchMovieData = title => async dispatch => {
-  const key = keys.API_KEY;
-  const request = await axios.get(`https://www.omdbapi.com/?apikey=${key}&t=${title}`);
+const requestMovieData = () => ({
+  type: REQUEST_MOVIE_DATA,
+  payload: true
+});
+
+const receiveMovieData = data => ({
+  type: RECEIVE_MOVIE_DATA,
+  payload: data
+});
+
+const movieDataError = data => ({
+  type: MOVIE_DATA_ERROR,
+  payload: data
+});
+
+export const fetchMovieData = () => async dispatch => {
+  dispatch(requestMovieData());
+  const request = await axios.get('/api/movie_data', {
+    params: {
+      title
+    }
+  });
   const { data } = request;
   if (data.Error) {
-    dispatch({ type: FETCH_DATA_ERROR, payload: false });
-    console.log(data);
+    dispatch(movieDataError(data));
   } else {
-    dispatch({ type: FETCH_MOVIE_DATA, payload: data });
-    console.log(data);
+    dispatch(receiveMovieData(data));
   }
-}
+};
