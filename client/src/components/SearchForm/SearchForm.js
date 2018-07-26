@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import FormField from './FormField';
 import { Field, reduxForm } from 'redux-form';
-import * as actions from '../../actions';
-import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 class SearchForm extends Component {
   formSubmit = ({ title }) => {
-    this.props.fetchMovieData(title);
+    const { history } = this.props;
+    history.push(`/movie/${title}`);
   }
 
   render() {
@@ -42,4 +42,9 @@ function validate(value) {
   return errors;
 }
 
-export default reduxForm({ form: 'location', validate })(connect(null, actions)(SearchForm));
+export default withRouter(
+  reduxForm({
+    validate,
+    form: 'title'
+  })(SearchForm)
+);

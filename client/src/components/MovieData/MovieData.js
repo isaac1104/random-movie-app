@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchMovieData } from '../../actions';
 
 class MovieData extends Component {
+  componentDidMount() {
+    const { title } = this.props.match.params;
+    this.props.fetchMovieData(title);
+  }
+
   renderMovieData() {
     const { isFetching, error, movieData } = this.props.data;
     const style = {
@@ -37,7 +43,6 @@ class MovieData extends Component {
   render() {
     return (
       <div className='container text-center'>
-        <h1 className='text-danger'>{this.props.match.params.title}</h1>
         {this.renderMovieData()}
       </div>
     );
@@ -50,4 +55,4 @@ function mapStateToProps({ data }) {
   };
 };
 
-export default connect(mapStateToProps, null)(MovieData);
+export default connect(mapStateToProps, { fetchMovieData })(MovieData);
