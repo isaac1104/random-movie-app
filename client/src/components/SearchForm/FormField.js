@@ -4,7 +4,6 @@ const FormField = field => {
   const handleFocus = event => {
     event.target.select();
   }
-
   const { meta: { touched, error } } = field;
   const className = `form-control ${touched && error ? 'is-invalid' : ''}`;
   return (
@@ -17,9 +16,6 @@ const FormField = field => {
         autoComplete='off'
         onFocus={handleFocus}
       />
-      <div className='invalid-feedback'>
-        {touched ? error : ''}
-      </div>
     </div>
   );
 }
