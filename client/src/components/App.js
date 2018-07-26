@@ -4,7 +4,7 @@ import MovieData from './MovieData/MovieData';
 
 const App = () => {
   return (
-    <div>
+    <div className='container-fluid'>
       <div className="jumbotron">
         <SearchForm />
       </div>
