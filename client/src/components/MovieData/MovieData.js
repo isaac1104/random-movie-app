@@ -49,7 +49,6 @@ class MovieData extends Component {
   };
 
   render() {
-    console.log(this.props.data);
     return (
       <div className='container text-center'>
         {this.renderMovieData()}
