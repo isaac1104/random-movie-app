@@ -16,7 +16,7 @@ const movieDataError = data => ({
   payload: data
 });
 
-export const fetchMovieData = () => async dispatch => {
+export const fetchMovieData = title => async dispatch => {
   dispatch(requestMovieData());
   const request = await axios.get('/api/movie_data', {
     params: {
