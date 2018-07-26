@@ -25,13 +25,13 @@ class SearchForm extends Component {
               className='btn btn-raised btn-primary'
               type='submit'
             >
-              <i className='mr-1 fas fa-search'/> Search
+              <i className='mr-1 fas fa-search' /> Search
             </button>
             <Link
               className='btn btn-raised btn-danger ml-1'
               to='/'
             >
-              <i className='mr-1 fas fa-home'/> Home
+              <i className='mr-1 fas fa-home' /> Home
             </Link>
           </div>
         </form>
