@@ -2,7 +2,7 @@
 
 ![capture](https://user-images.githubusercontent.com/28583016/43293336-985117b8-90ee-11e8-8de6-94294b53855c.PNG)
 
-![capture2](https://user-images.githubusercontent.com/28583016/43293345-9edbd7f8-90ee-11e8-89a2-9e14764c90d6.PNG)
+![capture2](https://user-images.githubusercontent.com/28583016/43293569-d8c446b6-90ef-11e8-9dc4-accc18eb1d3d.PNG)
 
 Search for a movie for details such as the released date, director, rating, and plot. 
 
