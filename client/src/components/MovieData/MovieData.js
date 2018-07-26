@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMovieData } from '../../actions';
+import { Redirect } from 'react-router-dom';
 
 class MovieData extends Component {
   componentDidMount() {
@@ -27,7 +28,7 @@ class MovieData extends Component {
       return <h1 style={style.movieData}>Loading...</h1>
     }
     if (error) {
-      return <h1 className='text-danger'>{movieData}</h1>
+      return <Redirect to='/movie/error' />
     }
     if (movieData.length === 0) {
       return <div />
@@ -48,6 +49,7 @@ class MovieData extends Component {
   };
 
   render() {
+    console.log(this.props.data);
     return (
       <div className='container text-center'>
         {this.renderMovieData()}
