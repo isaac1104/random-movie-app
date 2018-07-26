@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FormField from './FormField';
 import { Field, reduxForm } from 'redux-form';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class SearchForm extends Component {
   formSubmit = ({ title }) => {
@@ -27,6 +27,12 @@ class SearchForm extends Component {
             >
               <i className='mr-1 fas fa-search'/> Search
             </button>
+            <Link
+              className='btn btn-raised btn-danger ml-1'
+              to='/'
+            >
+              <i className='mr-1 fas fa-home'/> Home
+            </Link>
           </div>
         </form>
       </div>

@@ -4,9 +4,16 @@ import { fetchMovieData } from '../../actions';
 
 class MovieData extends Component {
   componentDidMount() {
-    const { title } = this.props.match.params;
-    this.props.fetchMovieData(title);
-  }
+    const { fetchMovieData, match: { params: { title } } } = this.props;
+    fetchMovieData(title);
+  };
+
+  componentDidUpdate(prevProps) {
+    const { fetchMovieData, match: { params: { title } } } = this.props;
+    if (prevProps.match.params.title !== title) {
+      fetchMovieData(title)
+    }
+  };
 
   renderMovieData() {
     const { isFetching, error, movieData } = this.props.data;
