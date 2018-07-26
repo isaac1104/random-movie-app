@@ -9,7 +9,7 @@ class MovieData extends Component {
     } else if (error) {
       return <h1 className='text-danger'>{movieData}</h1>
     } else {
-      return <h1 className='text-info'>{movieData.Title}</h1>
+      return <h1 className='text-primary'>{movieData.Title}</h1>
     }
   };
 
