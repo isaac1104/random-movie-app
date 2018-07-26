@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './Home/Home';
 import SearchForm from './SearchForm/SearchForm';
 import MovieData from './MovieData/MovieData';
 
@@ -19,6 +20,7 @@ const App = () => {
           <SearchForm />
         </div>
         <Switch>
+          <Route exact path='/' component={Home} />
           <Route exact path='/movie/:title' component={MovieData} />
         </Switch>
       </div>
