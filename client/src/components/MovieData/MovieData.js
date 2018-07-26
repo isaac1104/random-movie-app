@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 
 class MovieData extends Component {
   renderMovieData() {
-    const { isFetching, movieData } = this.props.data;
+    const { isFetching, error, movieData } = this.props.data;
     if (isFetching) {
       return <h1>Loading...</h1>
+    } else if (error) {
+      return <h1 className='text-danger'>{movieData}</h1>
     } else {
-      return <h1>{movieData.Title}</h1>
+      return <h1 className='text-info'>{movieData.Title}</h1>
     }
   };
 
