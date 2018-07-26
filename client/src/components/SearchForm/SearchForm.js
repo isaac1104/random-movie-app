@@ -17,7 +17,7 @@ class SearchForm extends Component {
       <div className='container'>
         <form onSubmit={handleSubmit(this.formSubmit)}>
           <Field
-            label='Movie Title'
+            label='MOVIE TITLE'
             name='title'
             component={FormField}
           />
