@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import SearchForm from './SearchForm/SearchForm';
 import MovieData from './MovieData/MovieData';
 
@@ -12,12 +13,16 @@ const App = () => {
   };
 
   return (
-    <div className='container-fluid' style={style.container}>
-      <div className="jumbotron">
-        <SearchForm />
+    <BrowserRouter>
+      <div className='container-fluid' style={style.container}>
+        <div className="jumbotron">
+          <SearchForm />
+        </div>
+        <Switch>
+          <Route exact path='/movie/:title' component={MovieData} />
+        </Switch>
       </div>
-      <MovieData />
-    </div>
+    </BrowserRouter>
   );
 }
 

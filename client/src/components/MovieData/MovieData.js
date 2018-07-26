@@ -35,9 +35,9 @@ class MovieData extends Component {
   };
 
   render() {
-    console.log(this.props.data);
     return (
       <div className='container text-center'>
+        <h1 className='text-danger'>{this.props.match.params.title}</h1>
         {this.renderMovieData()}
       </div>
     );
