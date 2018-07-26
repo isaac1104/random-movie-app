@@ -7,6 +7,7 @@ class SearchForm extends Component {
   formSubmit = ({ title }) => {
     const { history } = this.props;
     history.push(`/movie/title/${title}`);
+    this.props.reset();
   }
 
   render() {

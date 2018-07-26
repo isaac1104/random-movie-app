@@ -24,11 +24,11 @@ class MovieData extends Component {
       }
     };
 
-    if (isFetching) {
-      return <h1 style={style.movieData}>Loading...</h1>
-    }
     if (error) {
       return <Redirect to='/movie/error' />
+    }
+    if (isFetching) {
+      return <h1 style={style.movieData}>Loading...</h1>
     }
     if (movieData.length === 0) {
       return <div />
