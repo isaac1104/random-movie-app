@@ -40,8 +40,8 @@ class MovieData extends Component {
         </div>
         <div className='col-sm-6' style={style.movieDetail}>
           <h1>{movieData.Title}</h1>
-          <h3>{movieData.Genre}</h3>
-          <h5>{movieData.Released} | {movieData.Runtime} | {movieData.Rated}</h5>
+          <h3>{movieData.Released} | {movieData.Runtime} | {movieData.Rated}</h3>
+          <h5>{movieData.Genre}</h5>
           <p>{movieData.Plot}</p>
         </div>
       </div>
