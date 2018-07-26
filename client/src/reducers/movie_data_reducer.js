@@ -2,7 +2,8 @@ import { REQUEST_MOVIE_DATA, RECEIVE_MOVIE_DATA, MOVIE_DATA_ERROR } from '../act
 
 const INITIAL_STATE = {
   movieData: [],
-  isFetching: false
+  isFetching: false,
+  error: false
 };
 
 function movieDataReducer(state = INITIAL_STATE, action) {
@@ -10,19 +11,22 @@ function movieDataReducer(state = INITIAL_STATE, action) {
     case REQUEST_MOVIE_DATA:
       return {
         ...state,
-        isFetching: action.payload
+        isFetching: action.payload,
+        error: false
       };
     case RECEIVE_MOVIE_DATA:
       return {
         ...state,
+        movieData: action.payload,
         isFetching: false,
-        movieData: action.payload
+        error: false
       };
     case MOVIE_DATA_ERROR:
       return {
         ...state,
+        movieData: action.payload,
         isFetching: false,
-        movieData: action.payload
+        error: true
       };
     default:
       return state;
