@@ -21,7 +21,7 @@ const App = () => {
         </div>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/movie/:title' component={MovieData} />
+          <Route exact path='/movie/title/:title' component={MovieData} />
         </Switch>
       </div>
     </BrowserRouter>

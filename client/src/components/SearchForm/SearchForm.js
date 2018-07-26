@@ -6,7 +6,7 @@ import { withRouter, Link } from 'react-router-dom';
 class SearchForm extends Component {
   formSubmit = ({ title }) => {
     const { history } = this.props;
-    history.push(`/movie/${title}`);
+    history.push(`/movie/title/${title}`);
   }
 
   render() {
