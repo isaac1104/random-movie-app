@@ -18,6 +18,7 @@ const movieDataError = data => ({
 
 export const fetchMovieData = title => async dispatch => {
   dispatch(requestMovieData());
+  console.log(process.env.REACT_APP_OMDB_API_KEY);
   const request = await axios.get('/api/movie_data', {
     params: {
       key: process.env.REACT_APP_OMDB_API_KEY,
