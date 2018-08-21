@@ -6,18 +6,10 @@ import SearchForm from './SearchForm/SearchForm';
 import MovieData from './MovieData/MovieData';
 
 const App = () => {
-  const style = {
-    container: {
-      backgroundColor: '#36393f',
-      minHeight: '100vh',
-      overflow: 'hidden'
-    }
-  };
-
   return (
     <BrowserRouter>
-      <div className='container-fluid' style={style.container}>
-        <div className="jumbotron">
+      <div className='container-fluid'>
+        <div className='jumbotron'>
           <SearchForm />
         </div>
         <Switch>
