@@ -8,7 +8,7 @@ import MovieData from './MovieData/MovieData';
 const App = () => {
   const style = {
     container: {
-      backgroundColor: '#222222',
+      backgroundColor: '#36393f',
       minHeight: '100vh',
       overflow: 'hidden'
     }
