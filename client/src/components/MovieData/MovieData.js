@@ -38,11 +38,11 @@ class MovieData extends Component {
         <div className='col-sm-6'>
           <img src={movieData.Poster === 'N/A' ? 'https://via.placeholder.com/300x448?text=Poster+Not+Available' : movieData.Poster} alt='movie poster' className='img-fluid' />
         </div>
-        <div className='col-sm-6' style={style.movieDetail}>
-          <h1>{movieData.Title}</h1>
-          <h3>{movieData.Released} | {movieData.Runtime} | {movieData.Rated}</h3>
-          <h5>{movieData.Genre}</h5>
-          <p>{movieData.Plot}</p>
+        <div className='col-sm-6'>
+          <h1 style={style.movieDetail}>{movieData.Title}</h1>
+          <h3 style={style.movieDetail}>{movieData.Released} | {movieData.Runtime} | {movieData.Rated}</h3>
+          <h5 style={style.movieDetail}>{movieData.Genre}</h5>
+          <p style={style.movieDetail}>{movieData.Plot}</p>
         </div>
       </div>
     );
