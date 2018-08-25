@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMovieData } from '../../actions';
 import { Redirect } from 'react-router-dom';
+import { Icon, Spin } from 'antd';
 
 class MovieData extends Component {
   componentDidMount() {
@@ -28,7 +29,17 @@ class MovieData extends Component {
       return <Redirect to='/movie/error' />
     }
     if (isFetching) {
-      return <h1 style={style.movieDetail}>Loading...</h1>
+      return (
+        <Spin
+          size='large'
+          indicator={
+            <Icon
+              type='loading'
+              style={{ color: '#fff' }}
+            />
+          }
+        />
+      )
     }
     if (movieData.length === 0) {
       return <div />
