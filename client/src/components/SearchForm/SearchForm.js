@@ -44,7 +44,7 @@ class SearchForm extends Component {
 function validate(value) {
   const errors = {};
   if (!value.title) {
-    errors.title = 'Please the movie title';
+    errors.title = 'Please enter the movie title';
   }
   return errors;
 }
