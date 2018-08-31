@@ -9,7 +9,7 @@ const FormField = field => {
       <input
         {...field.input}
         className={className}
-        placeholder={touched ? error : ''}
+        placeholder={touched ? error : 'Please enter the movie title'}
         autoComplete='off'
       />
     </div>
