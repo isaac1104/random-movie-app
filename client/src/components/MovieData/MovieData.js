@@ -13,7 +13,7 @@ class MovieData extends Component {
   componentDidUpdate(prevProps) {
     const { fetchMovieData, match: { params: { title } } } = this.props;
     if (prevProps.match.params.title !== title) {
-      fetchMovieData(title)
+      fetchMovieData(title);
     }
   };
 
