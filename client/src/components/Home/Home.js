@@ -6,7 +6,12 @@ const Home = () => {
       color: '#fff'
     }
   };
-  return <h1 className='text-center' style={style.text}>Welcome to Movie Database</h1>
+  return (
+    <div className='text-center'>
+      <h1 style={style.text}>Welcome to Movie Database</h1>
+      <h3 style={style.text}>Search for your favorite movies!</h3>
+    </div>
+  )
 };
 
 export default Home;
