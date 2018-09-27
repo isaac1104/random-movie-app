@@ -5,3 +5,7 @@ body {
   background-color: #36393f;
   min-height: 100vh;
 }
+
+.jumbotron {
+  background-color: #f7fff7 !important;
+}
