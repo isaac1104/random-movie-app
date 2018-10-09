@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMovieData } from '../../actions';
 import { Redirect } from 'react-router-dom';
-import { Icon, Spin } from 'antd';
+import { Divider, Icon, Spin } from 'antd';
 
 class MovieData extends Component {
   componentDidMount() {
@@ -51,7 +51,10 @@ class MovieData extends Component {
         </div>
         <div className='col-sm-6'>
           <h1 style={style.movieDetail}>{movieData.Title}</h1>
-          <h3 style={style.movieDetail}>{movieData.Released} | {movieData.Runtime} | {movieData.Rated} | {movieData.Metascore}</h3>
+          <h3 style={style.movieDetail}>{movieData.Released} <Divider type='vertical'/> {movieData.Runtime} <Divider type='vertical'/> {movieData.Rated}</h3>
+          {movieData.Ratings.map(rating => {
+            return <p style={style.movieDetail}>{rating.Source}: {rating.Value}</p>
+          })}
           <h4 style={style.movieDetail}>Directed by: {movieData.Director}</h4>
           <h4 style={style.movieDetail}>{movieData.Actors}</h4>
           <h5 style={style.movieDetail}>{movieData.Genre}</h5>
