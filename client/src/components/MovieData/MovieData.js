@@ -51,7 +51,9 @@ class MovieData extends Component {
         </div>
         <div className='col-sm-6'>
           <h1 style={style.movieDetail}>{movieData.Title}</h1>
-          <h3 style={style.movieDetail}>{movieData.Released} | {movieData.Runtime} | {movieData.Rated}</h3>
+          <h3 style={style.movieDetail}>{movieData.Released} | {movieData.Runtime} | {movieData.Rated} | {movieData.Metascore}</h3>
+          <h4 style={style.movieDetail}>Directed by: {movieData.Director}</h4>
+          <h4 style={style.movieDetail}>{movieData.Actors}</h4>
           <h5 style={style.movieDetail}>{movieData.Genre}</h5>
           <p style={style.movieDetail}>{movieData.Plot}</p>
         </div>
@@ -60,6 +62,7 @@ class MovieData extends Component {
   };
 
   render() {
+    console.log(this.props.data);
     return (
       <div className='container text-center'>
         {this.renderMovieData()}
