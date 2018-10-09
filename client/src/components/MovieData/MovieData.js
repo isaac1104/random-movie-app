@@ -47,7 +47,7 @@ class MovieData extends Component {
     return (
       <div className='row'>
         <div className='col-sm-6'>
-          <img src={movieData.Poster === 'N/A' ? 'https://via.placeholder.com/300x448?text=Poster+Not+Available' : movieData.Poster} alt='movie poster' className='img-fluid' />
+          <img src={movieData.Poster === 'N/A' ? 'https://via.placeholder.com/300x448?text=Poster+Not+Available' : movieData.Poster} alt='movie poster' className='img-fluid' width={400} />
         </div>
         <div className='col-sm-6'>
           <h1 style={style.movieDetail}>{movieData.Title}</h1>
