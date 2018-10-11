@@ -1,6 +1,6 @@
 # Random Movie App
 
-![capture](https://user-images.githubusercontent.com/28583016/43293336-985117b8-90ee-11e8-8de6-94294b53855c.PNG)
+![1](https://user-images.githubusercontent.com/28583016/46820219-83edd800-cd3a-11e8-9844-09dd0101cddc.PNG)
 
 ![capture2](https://user-images.githubusercontent.com/28583016/43293569-d8c446b6-90ef-11e8-9dc4-accc18eb1d3d.PNG)
 
